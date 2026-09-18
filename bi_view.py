@@ -6,30 +6,30 @@ import altair as alt
 import pandas as pd
 import streamlit as st
 
-GOLD = '#b1883c'
-TEAL = '#37867b'
-INK = '#493e2f'
+GOLD = '#2196F3'
+TEAL = '#21C79A'
+INK = '#D8E5F0'
 
 
 def theme():
     st.markdown('''<style>
-    .stApp{background:#f8f6f1;color:#352e25}
-    [data-testid="stSidebar"]{background:#eee7da!important}
-    [data-testid="stSidebar"] *{color:#493e2f!important}
-    .block-container{max-width:1400px;padding-top:2rem}
-    [data-testid="stVerticalBlockBorderWrapper"]>div{border-color:#e7e0d3!important;border-radius:16px!important;background:#fffdf9}
-    [data-testid="stMetric"]{background:#fffdf9;border:1px solid #e7e0d3;border-radius:14px;padding:18px 22px}
-    [data-testid="stMetricValue"]{font-family:Georgia,serif;color:#715625}
-    .stButton>button[kind="primary"]{background:#9a742f;border-color:#9a742f;color:white}
-    .px-eyebrow{font-size:13px;letter-spacing:2px;color:#98763a;margin:0 0 5px}
-    .px-business{padding:20px 22px;border-left:3px solid #b1883c;background:#f4efe4;border-radius:0 12px 12px 0;font-size:16px;line-height:1.8}
-    h1,h2,h3{color:#493e2f!important;letter-spacing:-.03em}
+    .stApp{background:#071321;color:#E8F0F8}
+    [data-testid="stSidebar"]{background:#081827!important}
+    [data-testid="stSidebar"] *{color:#A9BCD0!important}
+    .block-container{max-width:1480px;padding-top:2rem}
+    [data-testid="stVerticalBlockBorderWrapper"]>div{border-color:#1C3550!important;border-radius:15px!important;background:#0D1B2A}
+    [data-testid="stMetric"]{background:#0D1B2A;border:1px solid #1C3550;border-radius:14px;padding:18px 22px}
+    [data-testid="stMetricValue"]{font-family:inherit;color:#E8F0F8}
+    .stButton>button[kind="primary"]{background:#2196F3;border-color:#2196F3;color:white}
+    .px-eyebrow{font-size:13px;letter-spacing:2px;color:#55B6FF;margin:0 0 5px}
+    .px-business{padding:20px 22px;border-left:3px solid #2196F3;background:#102338;border-radius:0 12px 12px 0;font-size:16px;line-height:1.8}
+    h1,h2,h3{color:#E8F0F8!important;letter-spacing:-.03em}
     </style>''', unsafe_allow_html=True)
 
 
 def draw(chart):
-    st.altair_chart(chart.configure(background='#fffdf9').configure_view(stroke=None)
-                    .configure_axis(labelColor=INK,titleColor=INK,gridColor='#eee8dd',labelFontSize=13,titleFontSize=13)
+    st.altair_chart(chart.configure(background='#0D1B2A').configure_view(stroke=None)
+                    .configure_axis(labelColor=INK,titleColor=INK,gridColor='#1C3550',labelFontSize=13,titleFontSize=13)
                     .configure_legend(labelColor=INK,titleColor=INK,labelFontSize=13), use_container_width=True)
 
 
